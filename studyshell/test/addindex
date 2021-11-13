@@ -1,0 +1,50 @@
+#!/bin/sh
+##清理环境
+
+#批量处理文件
+cd /Users/long/Desktop/inject/
+for line in $(cat 1.txt)
+do
+
+
+#ls /Users/long/Desktop/inject/*.ipa |xargs -I name cp /Users/long/useful/addindex.txt /Users/long/Desktop/index/$line.txt && sed -i  ""  "s#yyyyy#$line#g" /Users/long/Desktop/index/$line.txt
+##新增网页ipa栏目
+ls /Users/long/OneDrive\ -\ for\ personal/app/*.ipa |xargs -I name cp /Users/long/useful/addindex.txt /Users/long/Desktop/index/$line.txt && sed -i  ""  "s#yyyyy#$line#g" /Users/long/Desktop/index/$line.txt
+##克隆plist
+cp  /Users/long/useful/ipa.plist /Users/long/Desktop/inject/$line.plist  && sed -i  ""  "s#yyyyy#$line#g" /Users/long/Desktop/inject/$line.plist
+#sed -i  ""  "s#ipadownloadurl#http://119.91.83.131:8080/directlink/69/app/$line#g"  /Users/long/Desktop/inject/$line.plist
+##同步onedrive
+#cp /Users/long/Desktop/index/$line /Users/long/OneDrive\ -\ for\ personal/app/
+#cp /Users/long/Desktop/index/$line.png /Users/long/OneDrive\ -\ for\ personal/icon/
+##清理缓存
+#rm -rf  /Users/long/Desktop/inject/Payload/ /Users/long/Desktop/inject/1.txt
+done
+mv /Users/long/Desktop/inject/*.plist /Users/long/Desktop/index
+cp /Users/long/OneDrive\ -\ for\ personal/icon/*.png /Users/long/Desktop/index/ 
+#scp /Users/long/Desktop/index/*.png root@119.91.83.131:/www/wwwroot/119.91.83.131/appstore/img/
+##上传服务器
+#scp /Users/long/Desktop/index/*.plist root@119.91.83.131:/www/wwwroot/119.91.83.131/appstore/plist/ 
+#scp /Users/long/Desktop/index/*.png root@119.91.83.131:/www/wwwroot/119.91.83.131/appstore/img/
+scp /Users/long/Desktop/index/* root@119.91.83.131:/www/wwwroot/119.91.83.131/appstore/tmp/
+#远程执行服务器命令
+ssh root@119.91.83.131 "bash /www/wwwroot/119.91.83.131/appstore/addindex.sh"
+fi
+
+
+
+
+
+
+##提取图标
+#cd /Users/long/Desktop/inject/ && unzip $line -d ./   && mv /Users/long/Desktop/inject/Payload/*.app/AppIcon60x60@2x.png /Users/long/Desktop/index/$line.png 
+
+if [ -f /Users/long/Desktop/inject/*.deb ]; then
+##检查并注入deb
+mv /Users/long/Desktop/inject/*.ipa /Users/long/Documents/ && cd /Users/long/Desktop/inject/ && ls *.deb |xargs -I name dpkg -x name ./ && ls /Users/long/Desktop/inject/Library/MobileSubstrate/DynamicLibraries/*.dylib |xargs -n 2 -I name install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate @loader_path/libsubstrate.dylib name && ls /Users/long/Desktop/inject/Library/MobileSubstrate/DynamicLibraries/*.dylib |xargs -I name sh -c 'mv /Users/long/Documents/*.ipa /Users/long/Documents/1.ipa; injectapp /Users/long/Documents/1.ipa name;rm /Users/long/Documents/1.ipa' && rm -rf /Users/long/Desktop/inject/Library /Users/long/Desktop/inject/*.deb
+else
+#cd /Users/long/Desktop/inject/ && ls -1 | grep ".ipa$" > /Users/long/Desktop/inject/1.txt
+cd /Users/long/OneDrive\ -\ for\ personal/app/ && ls -1 | grep ".ipa$" > /Users/long/Desktop/inject/1.txt
+
+
+
+rm  -rf  /Users/long/Documents/*.ipa  /Users/long/Desktop/*.png  /Users/long/Desktop/*.plist /Users/long/Desktop/*.txt /Users/long/Desktop/index/* /Users/long/Desktop/inject/*.txt

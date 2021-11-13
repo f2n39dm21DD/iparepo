@@ -1,0 +1,50 @@
+{
+name: ,
+bundleIdentifier: cc.tjtech.jcdemo881.Player,
+version: 1.1,
+versionDate: 2020-10-17,
+downloadURL: downloadurl,
+iconURL: iconurl,
+localizedDescription: 无,
+size: 70840
+},
+{
+name: ,
+bundleIdentifier: qnq.nuosike.sign,
+version: 1.1,
+versionDate: 2020-10-17,
+downloadURL: downloadurl,
+iconURL: iconurl,
+localizedDescription: 无,
+size: 6424
+},
+{
+name: ,
+bundleIdentifier: com.xianyun.ttkdy,
+version: 1.1,
+versionDate: 2020-10-17,
+downloadURL: downloadurl,
+iconURL: iconurl,
+localizedDescription: 无,
+size: 6776
+},
+{
+name: ,
+bundleIdentifier: com.richVideo.app,
+version: 1.1,
+versionDate: 2020-10-17,
+downloadURL: downloadurl,
+iconURL: iconurl,
+localizedDescription: 无,
+size: 5528
+},
+{
+name: ,
+bundleIdentifier: top.limuyang.SMSClassifier,
+version: 1.1,
+versionDate: 2020-10-17,
+downloadURL: downloadurl,
+iconURL: iconurl,
+localizedDescription: 无,
+size: 5560
+},
