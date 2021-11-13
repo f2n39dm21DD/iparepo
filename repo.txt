@@ -1,0 +1,11 @@
+ {
+            "name": '${bundleDisplayName}',
+            "bundleIdentifier": '${bundleBuildVersion}',
+            "version": "${bundleVersion}",
+            "versionDate": "2021-01-18",
+            "downloadURL": "https://outexp-beta.cdn.qq.com/outbeta/2021/01/15/comtencentQQMusic_20000_d248f174-ccb1-5af3-a3ed-f88b009d6a8e.ipa",
+            "iconURL": "http://tiebapic.baidu.com/tieba/pic/item/7dd98d1001e939017d38b17b6cec54e736d196b8.jpg",
+            "localizedDescription": "[破解应用]QQ音乐VIP全功能解锁,与官方版无法共存",
+            "tintColor": "018084",
+            "size": 191399045
+        }
