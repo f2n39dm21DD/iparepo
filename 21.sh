@@ -24,8 +24,8 @@ echo "        {
             "name": '${nam[2]%?}',
             "bundleIdentifier": '${bun[2]}',
             "version": "${ver[2]}",
-            "downloadURL": "1",
-            "iconURL": "https://raw.githubusercontent.com/f2n39dm21DD/iparepo/main/$ppng":
+            "downloadURL": '1',
+            "iconURL": 'https://raw.githubusercontent.com/f2n39dm21DD/iparepo/main/icon/$ppng':
             "localizedDescription": "1",
             "tintColor": "018084",
             "size": ${siz[0]}
@@ -43,7 +43,7 @@ do
 unzip -q $line -d ./
 mkdir -p icon
 #get icon
-mv /var/mobile/iparepo/Payload/*.app/AppIcon60x60@2x.png /var/mobile/iparepo/$line.png
+mv /var/mobile/iparepo/Payload/*.app/AppIcon60x60@2x.png /var/mobile/iparepo/icon/$line.png
 done
 ppng=$line.png
 rm 1.txt
