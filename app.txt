@@ -1,0 +1,11 @@
+        {
+            name: "\U70b9\U70b9",
+            bundleIdentifier: "com.zqccloud.diandian",
+            version: "2.1.6",
+versionDate: Sun Nov 14 02:01:53 CST 2021,
+            downloadURL: 1,
+            iconURL: 1:
+            localizedDescription: 1,
+            tintColor: 018084,
+            size: 19884
+        },
