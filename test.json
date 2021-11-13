@@ -1,0 +1,25 @@
+{
+	"name": "test源",
+	"sourceURL": "https://raw.githubusercontent.com/f2n39dm21DD/iparepo/main/repo.json",
+	"apps": [{
+			"name": "公告",
+			"version": "1.0",
+			"versionDate": " ",
+			"iconURL": "http://tiebapic.baidu.com/tieba/pic/item/4ec2d5628535e5dd0847128461c6a7efce1b6206.jpg",
+			"downloadURL": "https://www.baidu.com",
+			"localizedDescription": "以下软件均来自互联网,不得将软件用于商业或者非法用途,否则,一切后果请用户自负!您必须在下载后的24个小时内从您的设备中彻底删除,如有侵权请联系我处理!需要稳定包年证书联系QQ291969996",
+			"size": 2447
+		},
+        {
+			"name": "QQ音乐",
+			"bundleIdentifier": "com.tencent.QQMusic",
+			"version": "20000",
+			"versionDate": "2021-01-18",
+			"downloadURL": "https://outexp-beta.cdn.qq.com/outbeta/2021/01/15/comtencentQQMusic_20000_d248f174-ccb1-5af3-a3ed-f88b009d6a8e.ipa",
+			"iconURL": "https://raw.githubusercontent.com/f2n39dm21DD/iparepo/main/点点_2.1.6.ipa.png",
+			"localizedDescription": "[破解应用]QQ音乐VIP全功能解锁,与官方版无法共存",
+			"tintColor": "018084",
+			"size": 191399045
+		},
+       
+]}
