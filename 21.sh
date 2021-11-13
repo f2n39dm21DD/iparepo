@@ -13,7 +13,7 @@ size=`du /var/mobile/iparepo/*.ipa`
 nam=($name)
 bun=($bundle)
 siz=($size)
-dat=`date`
+dat=($dae)
 ver=($version)
 }
 #替换修改
@@ -24,9 +24,8 @@ echo "        {
             "name": '${nam[2]%?}',
             "bundleIdentifier": '${bun[2]}',
             "version": "${ver[2]}",
-"versionDate": "$dat",
             "downloadURL": "1",
-            "iconURL": "1":
+            "iconURL": "https://raw.githubusercontent.com/f2n39dm21DD/iparepo/main/$ppng":
             "localizedDescription": "1",
             "tintColor": "018084",
             "size": ${siz[0]}
@@ -38,7 +37,17 @@ echo "]}" >> repo.json
 }
 #解压包
 rm app.txt
-unzip -q *.ipa -d ./
+ls -1 | grep ".ipa$" > 1.txt
+for line in $(cat 1.txt)
+do
+unzip -q $line -d ./
+mkdir -p icon
+#get icon
+mv /var/mobile/iparepo/Payload/*.app/AppIcon60x60@2x.png /var/mobile/iparepo/$line.png
+done
+ppng=$line.png
+rm 1.txt
 tiqu
+#add info
 xiugai
 rm -rf Payload

@@ -43,4 +43,24 @@ versionDate: Sun Nov 14 02:01:53 CST 2021,
             tintColor: 018084,
             size: 19884
         },
+        {
+            name: ,
+            bundleIdentifier: ,
+            version: ,
+            downloadURL: 1,
+            iconURL: https://raw.githubusercontent.com/f2n39dm21DD/iparepo/main/.png:
+            localizedDescription: 1,
+            tintColor: 018084,
+            size: 
+        },
+        {
+            name: "\U70b9\U70b9",
+            bundleIdentifier: "com.zqccloud.diandian",
+            version: "2.1.6",
+            downloadURL: 1,
+            iconURL: https://raw.githubusercontent.com/f2n39dm21DD/iparepo/main/点点_2.1.6.ipa.png:
+            localizedDescription: 1,
+            tintColor: 018084,
+            size: 19884
+        },
 ]}
